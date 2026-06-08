@@ -69,19 +69,19 @@ def main():
 
         meta_feat = np.array([[prob_q, prob_b, prob_t]])
         prob = meta.predict_proba(meta_feat)[0, 1]
-        is_ai = prob >= 0.5
+        is_ai = prob >= CONFIG["threshold"]
 
         # 判定结果
-        if prob >= 0.85:
+        if prob >= 2*CONFIG['threshold']:
             label = "🤖 AI 生成（高置信度）"
-        elif prob >= 0.5:
+        elif prob >= CONFIG['threshold']:
             label = "🤖 AI 生成（中置信度）"
-        elif prob >= 0.15:
+        elif prob >= 0.25*CONFIG['threshold']:
             label = "✍️ 人类写作（中置信度）"
         else:
             label = "✍️ 人类写作（高置信度）"
-
-        confidence = prob if is_ai else (1 - prob)
+        ai_confidence = (prob-CONFIG['threshold'])/(3*CONFIG['threshold'])
+        confidence = ai_confidence if is_ai else (1 - ai_confidence)
 
         # 各模型详情
         details = (
