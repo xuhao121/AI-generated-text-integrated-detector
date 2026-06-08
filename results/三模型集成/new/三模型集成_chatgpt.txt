@@ -1,0 +1,14 @@
+   precision    recall  f1-score   support
+
+       人类(0)     0.0000    0.0000    0.0000         0
+       AI(1)     1.0000    0.8358    0.9106       134
+
+    accuracy                         0.8358       134
+   macro avg     0.5000    0.4179    0.4553       134
+weighted avg     1.0000    0.8358    0.9106       134
+
+ROC-AUC:   nan
+1-Brier:   0.6767
+C@1:       0.8308
+F1:        0.9106
+PAN Mean:  nan

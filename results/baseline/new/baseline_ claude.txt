@@ -1,0 +1,52 @@
+  qwen
+  precision    recall  f1-score   support
+
+       人类(0)     0.0000    0.0000    0.0000         0
+       AI(1)     1.0000    0.4394    0.6105       132
+
+    accuracy                         0.4394       132
+   macro avg     0.5000    0.2197    0.3053       132
+weighted avg     1.0000    0.4394    0.6105       132
+
+C:\ProgramData\anaconda3\envs\CCS2\Lib\site-packages\sklearn\metrics\_ranking.py:442: UndefinedMetricWarning: Only one class is present in y_true. ROC AUC score is not defined in that case.
+  warnings.warn(
+ROC-AUC:   nan
+1-Brier:   0.4254
+C@1:       0.4394
+F1:        0.6105
+PAN Mean:  nan
+
+[基线：ModernBERT（单模型, 阈值 0.5）]
+
+--- 集成表现 ---
+
+              precision    recall  f1-score   support
+
+       人类(0)     0.0000    0.0000    0.0000         0
+       AI(1)     1.0000    0.4091    0.5806       132
+
+    accuracy                         0.4091       132
+   macro avg     0.5000    0.2045    0.2903       132
+weighted avg     1.0000    0.4091    0.5806       132
+
+ROC-AUC:   nan
+1-Brier:   0.3963
+C@1:       0.4091
+F1:        0.5806
+PAN Mean:  nan
+
+[基线：TF-IDF + LightGBM（单模型, 阈值 0.5）]
+              precision    recall  f1-score   support
+
+       人类(0)     0.0000    0.0000    0.0000         0
+       AI(1)     1.0000    0.7273    0.8421       132
+
+    accuracy                         0.7273       132
+   macro avg     0.5000    0.3636    0.4211       132
+weighted avg     1.0000    0.7273    0.8421       132
+
+ROC-AUC:   nan
+1-Brier:   0.4924
+C@1:       0.7049
+F1:        0.8421
+PAN Mean:  nan

@@ -1,0 +1,53 @@
+[基线：Qwen2.5-1.5B + QLoRA（单模型, 阈值 0.5）]
+
+--- 集成表现 ---
+              precision    recall  f1-score   support
+
+       人类(0)     0.6442    1.0000    0.7836        67
+       AI(1)     1.0000    0.7239    0.8398       134
+
+    accuracy                         0.8159       201
+   macro avg     0.8221    0.8619    0.8117       201
+weighted avg     0.8814    0.8159    0.8211       201
+
+ROC-AUC:   0.9063
+1-Brier:   0.7949
+C@1:       0.8159
+F1:        0.8398
+PAN Mean:  0.8392
+[基线：ModernBERT（单模型, 阈值 0.5）]
+
+--- 集成表现 ---
+              precision    recall  f1-score   support
+
+       人类(0)     0.5323    0.9851    0.6911        67
+       AI(1)     0.9870    0.5672    0.7204       134
+
+    accuracy                         0.7065       201
+   macro avg     0.7596    0.7761    0.7057       201
+weighted avg     0.8354    0.7065    0.7106       201
+
+ROC-AUC:   0.8863
+1-Brier:   0.6994
+C@1:       0.7065
+F1:        0.7204
+PAN Mean:  0.7531
+
+
+[基线：TF-IDF + LightGBM（单模型, 阈值 0.5）]
+
+--- 集成表现 ---
+              precision    recall  f1-score   support
+
+       人类(0)     0.6833    0.6119    0.6457        67
+       AI(1)     0.8156    0.8582    0.8364       134
+
+    accuracy                         0.7761       201
+   macro avg     0.7495    0.7351    0.7410       201
+weighted avg     0.7715    0.7761    0.7728       201
+
+ROC-AUC:   0.8432
+1-Brier:   0.6920
+C@1:       0.7701
+F1:        0.8364
+PAN Mean:  0.7854
